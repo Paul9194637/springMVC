@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:contex="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<!--  自動掃描spring類  -->
+    <contex:component-scan base-package="com.paul.mvc.controller"/>
+
+<!--  配置Thymeleaf View (html) 解析器  -->
+
+
+
+    <!-- 處理靜態資源, 例如html, js, css, jpg, 若只設置該標籤, 則只能訪問靜態資源, 其他請求則無法訪問  -->
+    <!-- 此時必須設置 <mvc:annotation-driven/>解決問題   -->
+<!--    <mvc:default-servlet-handler/>-->
+
+<!--    &lt;!&ndash; 開啟 mvc 註解驅動   &ndash;&gt;-->
+<!--    <mvc:annotation-driven>-->
+<!--        <mvc:message-converters>-->
+<!--            &lt;!&ndash;   處理response中文內容亂碼     &ndash;&gt;-->
+<!--            <bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+<!--                <property name="defaultCharset" value="UTF-8"/>-->
+<!--                <property name="supportedMediaTypes">-->
+<!--                    <list>-->
+<!--                        <value>text/html</value>-->
+<!--                        <value>application/json</value>-->
+<!--                    </list>-->
+<!--                </property>-->
+<!--            </bean>-->
+<!--        </mvc:message-converters>-->
+<!--    </mvc:annotation-driven>-->
+
+</beans>
